@@ -1,0 +1,82 @@
+@import '../../theme.css';
+
+.product-details-section{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    box-sizing: border-box;
+    font-family:  'PT Serif', serif;
+    line-height: 2em;
+    margin-top: 40px;
+    padding: 0 8px;
+}
+.label{
+    background-color: var(--light-green);
+    color: var(--white);
+    padding: 0 8px;
+    border-radius: 4px;
+    width: fit-content;
+    line-height: 1.5em;
+}
+.product-details-section h1{
+    color: var(--black);
+    font-weight: 500;
+    line-height: 1.2em;
+    padding: 4px 0;
+}
+.product-details-section i, .wine-aromas p, .flag-sec, .title-aromas{
+    color: var(--grey);
+    font-family: 'PT Sans', sans-serif;
+}
+.flag-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+}
+.flag-sec img{
+    border-radius: 50%;
+}
+.green-thumb-sec li{
+    display: inline-block;
+}
+.green-thumb-sec i{    
+    font-size: 15px;
+    margin-left: 4px;
+}
+.wine-aromas, .wine-aromas div{
+    display: flex;    
+    flex-wrap: wrap; 
+    line-height: normal;   
+}
+.wine-aromas{ 
+    justify-content: space-around;   
+    flex: 2 1;
+}
+.wine-aromas p{
+    font-size: 10px;
+}
+.wine-aromas div{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.wine-aromas div img{
+    max-width: 100%;
+    height: 120px;
+    margin-bottom: 8px;
+}
+.title-aromas{
+    margin-top: 12px;
+    font-size: 15px;
+}
+@media (max-width: 900px) and (min-width: 100px){
+  .product-details-section{
+      width: 100%;
+  }
+}
+@media (max-width: 600px) and (min-width: 100px){
+  .flag-sec{
+      width: 80%;
+  }
+}

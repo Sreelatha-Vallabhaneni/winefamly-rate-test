@@ -1,0 +1,63 @@
+@import '../../theme.css';
+
+.close{
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+.close button{
+    font-size:30px;
+    float: right;
+    margin-right: 8px;
+    border:none;
+    cursor: pointer;
+}
+.modal-rate{
+    height: 120px;    
+    flex-direction: column;
+}
+.rating-btns, .modal-rate, .message{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.message{
+    height: 120px;
+    flex-direction: column;
+    margin-left: 12px;
+}
+.modal-rate, .rating-btns{
+    width: 100%;
+}
+.rating-btns button{
+    border-radius: 20px;
+    border:none;
+    margin: 4px 8px;
+    width:38%;
+    height:3.5em;
+    background-color: var(--white);
+    cursor: pointer;
+}
+.review-form input[type="submit" ]{
+    background-color: var(--green);
+    width: 80%;
+    height: 2em;
+    border-radius: 10px;
+    margin: 8px 0;
+    border: none;
+    color: white;
+}
+.review-form textarea{
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    margin: 0 4px 0 8px;
+} 
+.review-form textarea::placeholder{
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 0 0 8px;
+} 
+.review-form textarea:focus{
+    outline: none;
+}
+
