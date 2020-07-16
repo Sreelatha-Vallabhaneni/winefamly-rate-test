@@ -8,7 +8,7 @@ import "./modal.css";
 const Modal = styled.div`
   display: ${({ close }) => !close && "none"};
   width: 240px;
-  height: 180px;
+  height: ${({ close }) => close && "165px"};
   background-color: var(--light-grey);
   border-radius: 10px;
 `;
@@ -52,7 +52,7 @@ function ProductModal() {
           </button>
         </div>
       </RateDiv>
-      {!click && <ReviewProduct />}
+      {!click && <ReviewProduct close={close} setClose={setClose} />}
     </Modal>
   );
 }
@@ -62,7 +62,7 @@ const Review = styled.form`
   text-align: center;
 `;
 
-function ReviewProduct() {
+function ReviewProduct({ close, setClose }) {
   const [input, setInput] = useState("");
   const [message, setMessage] = useState(false);
   const handleChange = (event) => {
@@ -90,7 +90,17 @@ function ReviewProduct() {
       </Review>
       <div className="message">
         {message && <p style={{ color: "var(--green)" }}>Tak for din tid</p>}
-        {message && <u>Luk vinduet</u>}
+        {message && (
+          <button
+            style={{ border: "none", cursor: "pointer" }}
+            onClick={(e) => {
+              e.preventDefault();
+              setClose(!close);
+            }}
+          >
+            <u>Luk vinduet</u>
+          </button>
+        )}
       </div>
     </div>
   );
